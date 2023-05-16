@@ -1,0 +1,7 @@
+// Write Comma separate parser
+field = { (ASCII_DIGIT | "-" | ".")+ }
+// Define grammar of group of fields that separate with comma ","
+record = { field ~ ("," ~ field)* } 
+// In unix and macOS defines `\r` or `\n` for define new line to write
+// 
+file = { SOI ~ (record ~ ("\r\n" | "\n"))* ~ EOI }
