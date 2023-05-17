@@ -1,4 +1,6 @@
 /// Write comma separate parser
+///
+/// [This practice](https://pest.rs/?g=eyJncmFtbWFyIjoiLy8vIFdpcnRlIGNvbW1hIHNlcGFyYXRlIHBhcnNlclxuXG4vLyBQcmVwYXJlIG51bWJlcnMgbGlrZSAyLjUsIDYxMiwgLTE0XG5maWVsZCA9IHsgKEFTQ0lJX0RJR0lUIHwgXCItXCIgfCBcIi5cIikrIH1cblxuLy8gUHJlcGFyZSBhIGZpZWxkLCBuZXh0IHRvIGNvbW1hIGFuZCAuLi5maWVsZFxucmVjb3JkID0gIHsgZmllbGQgfiAoXCIsXCIgfiBmaWVsZCkqIH1cblxuLy8gUHJlcGFyZSBsaXN0IG9mIHJlY29yZCBsaWtlIHJlYWwgLmNzdlxuZmlsZSA9IHsgU09JIH4gKHJlY29yZCB-IChcIlxcblxcclwiIHwgXCJcXG5cIikpKiB-IEVPSSB9IiwiaW5wdXQiOiIyMywxMjMsMTIzLDAuNDUsMC42Nzk4Nyw0NTM2XG41NS42Nyw0LjEyMyw0LjU3NlxuMTEuMiwxMi4zLDQuNSw2LjcsLTY3NjcuODY3OCw2Nzg2Ljc4LDY3LjhcbiJ9#editor)
 
 // Prepare numbers like 2.5, 612, -14
 field = { (ASCII_DIGIT | "-" | ".")+ }
