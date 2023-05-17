@@ -1,7 +1,10 @@
-// Write Comma separate parser
+/// Write comma separate parser
+
+// Prepare numbers like 2.5, 612, -14
 field = { (ASCII_DIGIT | "-" | ".")+ }
-// Define grammar of group of fields that separate with comma ","
-record = { field ~ ("," ~ field)* } 
-// In unix and macOS defines `\r` or `\n` for define new line to write
-// 
-file = { SOI ~ (record ~ ("\r\n" | "\n"))* ~ EOI }
+
+// Prepare a field, next to comma and ...field
+record =  { field ~ ("," ~ field)* }
+
+// Prepare list of record like real .csv
+file = { SOI ~ (record ~ ("\n\r" | "\n"))* ~ EOI }
