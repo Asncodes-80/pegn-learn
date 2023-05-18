@@ -9,9 +9,11 @@
 /// [view]()
 
 char = { ASCII_ALPHANUMERIC | "." | "_" | "/" }
-name = { char+ }
-value = { char* } // Include λ
+name = @{ char+ }
+value = @{ char* } // Include λ
 another_name_str_wrapped = { "\"" ~ name ~ "\"" }
+// Create Whitespace between name=value -> name = value
+WHITESPACE = _{ " " }
 
 // Define section. Sample: [Service_name]
 section = { "[" ~ name ~ "]" }
