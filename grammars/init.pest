@@ -1,0 +1,20 @@
+/// A grammar for .ini configuration file
+/// Author: Alireza Soltani Neshan
+/// init.pest
+/// Sample ini file
+/// // Sections
+/// [Section_name]
+/// // Values:
+/// key = value
+/// [view]()
+
+char = { ASCII_ALPHANUMERIC | "." | "_" | "/" }
+name = { char+ }
+value = { char* } // Include λ
+another_name_str_wrapped = { "\"" ~ name ~ "\"" }
+
+// Define section. Sample: [Service_name]
+section = { "[" ~ name ~ "]" }
+property = { name ~ "=" ~ value }
+file = { SOI ~ ((section | property)? ~ NEWLINE)* ~ EOI } 
+

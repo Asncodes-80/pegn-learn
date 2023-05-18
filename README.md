@@ -12,8 +12,9 @@ that.
 - Curly Braces `{}`: As start to define new line of grammar for a variable you
   must define grammar between a Curly Braces
 - ASCII_DIGIT: Contains all ASCII digital numbers
-- Plus `+`: is just like Regex, continue expression
-- Asterisk `*`: Is just like +, repeat pattern zero or more time
+- Plus `+`: is just like Regex, continue expression: x^1, x^2
+- Asterisk `*`: Is just like +, repeat pattern zero or more time:       (x^0=""
+  or lambda`), x^1, x^2
 - Tilde `~`: Is just like And to concatenate two things, "abc" ~ "def" ->
   "abcdef"
 - SOI: Start of Input
